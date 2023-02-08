@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ip-lookup
+  name: ip-lookup
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ip-lookup
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ip-lookup
+    spec:
+      containers:
+      - image: icecreammatt/lookup:latest
+        name: lookup
+        ports:
+        - containerPort: 5000
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ip-lookup
+  name: ip-lookup
+spec:
+  selector:
+    app: ip-lookup
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
