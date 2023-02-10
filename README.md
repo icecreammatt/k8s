@@ -20,6 +20,7 @@
 - `minikube dashboard`
 - `minikube addons enable ingress`
 - `minikube addons enable metrics-server`
+- `kubectl proxy`
 
 ### Non Minikube Dashboard
 
@@ -30,17 +31,18 @@
 - `kk apply -f ip-lookup.yaml`
 - `kk apply -f ingress.yaml`
 - `minikube tunnel`
-- `kubectl proxy`
 
 ### excalidraw
 
 - `kk apply -f excalidraw.yaml`
 - `kk apply -f ingress.yaml`
+- `minikube tunnel`
 
 ### mattcarrier
 
 - `kk apply -f mattcarrier.yaml`
 - `kk apply -f ingress.yaml`
+- `minikube tunnel`
 
 ### hosts
 
