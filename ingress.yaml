@@ -16,3 +16,13 @@ spec:
                 name: ip-lookup
                 port:
                   number: 5000
+    - host: excalidraw.localhost.com
+      http:
+        paths:
+          - path: /
+            pathType: Exact
+            backend:
+              service:
+                name: excalidraw
+                port:
+                  number: 80
