@@ -22,6 +22,7 @@ spec:
         name: excalidraw
         ports:
         - containerPort: 80
+          name: xcldrw
         resources: {}
 status: {}
 ---
@@ -37,5 +38,5 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8086
+      targetPort: xcldrw

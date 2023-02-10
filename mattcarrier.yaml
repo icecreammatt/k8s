@@ -38,5 +38,5 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80
+      port: 8085
       targetPort: mttcrrr-dmn-svc

@@ -15,7 +15,7 @@ spec:
               service:
                 name: ip-lookup
                 port:
-                  number: 5000
+                  number: 8087
     - host: excalidraw.localhost.com
       http:
         paths:
@@ -25,7 +25,7 @@ spec:
               service:
                 name: excalidraw
                 port:
-                  number: 80
+                  number: 8086
     - host: mattcarrier.localhost.com
       http:
         paths:
@@ -35,4 +35,4 @@ spec:
               service:
                 name: mattcarrier
                 port:
-                  number: 80
+                  number: 8085
