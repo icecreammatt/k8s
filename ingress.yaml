@@ -26,3 +26,13 @@ spec:
                 name: excalidraw
                 port:
                   number: 80
+    - host: mattcarrier.localhost.com
+      http:
+        paths:
+          - path: /
+            pathType: Exact
+            backend:
+              service:
+                name: mattcarrier
+                port:
+                  number: 80

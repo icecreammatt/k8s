@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mattcarrier
+  name: mattcarrier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mattcarrier
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mattcarrier
+    spec:
+      containers:
+      - image: icecreammatt/mattcarrier.com:2023.02.10
+        name: mattcarrier
+        ports:
+        - containerPort: 80
+          name: mttcrrr-dmn-svc
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: mattcarrier
+  name: mattcarrier
+spec:
+  selector:
+    app: mattcarrier
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: mttcrrr-dmn-svc

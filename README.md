@@ -37,10 +37,16 @@
 - `kk apply -f excalidraw.yaml`
 - `kk apply -f ingress.yaml`
 
+### mattcarrier
+
+- `kk apply -f mattcarrier.yaml`
+- `kk apply -f ingress.yaml`
+
 ### hosts
 
 ```
 127.0.0.1 ip.localhost.com 
+127.0.0.1 mattcarrier.localhost.com
 127.0.0.1 excalidraw.localhost.com 
 127.0.0.1 kubernetes.default.svc.cluster.local
 ```
