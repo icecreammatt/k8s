@@ -44,6 +44,26 @@
 - `kk apply -f ingress.yaml`
 - `minikube tunnel`
 
+### ArgoCD
+
+#### Install
+
+```bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+#### Accesss
+
+```bash
+minikube service argocd-server -n argocd -p test
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d
+```
+
+#### Uninstall
+
+`kubectl delete -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
+
 ### hosts
 
 ```
