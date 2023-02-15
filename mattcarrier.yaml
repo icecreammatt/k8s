@@ -32,6 +32,8 @@ metadata:
   labels:
     app: mattcarrier
   name: mattcarrier
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: stage.mattcarrier.net
 spec:
   selector:
     app: mattcarrier

@@ -26,6 +26,16 @@ spec:
                 name: excalidraw
                 port:
                   number: 8086
+    - host: stage.mattcarrier.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mattcarrier
+                port:
+                  number: 8085
     - host: mattcarrier.localhost.com
       http:
         paths:

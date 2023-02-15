@@ -64,6 +64,12 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.pas
 
 `kubectl delete -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
 
+### DNS
+
+#### PiHole DNS Setup
+https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/pihole.md
+
+
 ### hosts
 
 ```
