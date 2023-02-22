@@ -32,6 +32,8 @@ metadata:
   labels:
     app: excalidraw
   name: excalidraw
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: excalidraw.stage.mattcarrier.net
 spec:
   selector:
     app: excalidraw
