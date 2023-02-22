@@ -14,6 +14,7 @@
 
 - `minikube tunnel`
 - `kubectl proxy`
+- `http://127.0.0.1:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default`
 
 ### Install dashboard
 
