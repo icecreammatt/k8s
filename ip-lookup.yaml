@@ -32,6 +32,8 @@ metadata:
   labels:
     app: ip-lookup
   name: ip-lookup
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: ip.stage.mattcarrier.net
 spec:
   selector:
     app: ip-lookup
