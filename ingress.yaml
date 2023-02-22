@@ -36,13 +36,3 @@ spec:
                 name: mattcarrier
                 port:
                   number: 8085
-    - host: mattcarrier.localhost.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: mattcarrier
-                port:
-                  number: 8085
