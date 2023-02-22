@@ -16,7 +16,7 @@ spec:
                 name: ip-lookup
                 port:
                   number: 8087
-    - host: excalidraw.localhost.com
+    - host: excalidraw.stage.mattcarrier.net
       http:
         paths:
           - path: /
