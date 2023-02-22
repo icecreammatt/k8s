@@ -37,6 +37,8 @@ metadata:
 spec:
   selector:
     app: ip-lookup
+  # type: ExternalName
+  # externalName: ip.localhost.com
   type: LoadBalancer
   ports:
     - protocol: TCP
