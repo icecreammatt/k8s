@@ -73,6 +73,14 @@ https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/pihol
 
 ### hosts
 
+## Authentik
+
+- https://xpufx.com/posts/protecting-your-first-app-with-authentik/
+- https://goauthentik.io/docs/installation/kubernetes
+- helm repo add authentik https://charts.goauthentik.io
+- helm repo update
+- helm upgrade --install authentik authentik/authentik -f values.yaml
+
 ```
 127.0.0.1 ip.localhost.com 
 127.0.0.1 mattcarrier.localhost.com
