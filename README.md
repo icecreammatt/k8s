@@ -81,6 +81,17 @@ https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/pihol
 - helm repo update
 - helm upgrade --install authentik authentik/authentik -f values.yaml
 
+# LetsEncrypt
+- sudo /opt/certbot/bin/pip install certbot-dns-cloudflare
+- sudo /opt/certbot/bin/certbot certonly --dns-cloudflare \ 
+  --dns-cloudflare-credentials ~/CloudFlare/sub.domain.ini -d sub.domain
+
+> sub.domain.ini
+```
+ns_cloudflare_api_token = XXX
+```
+
+# Hosts
 ```
 127.0.0.1 ip.localhost.com 
 127.0.0.1 mattcarrier.localhost.com
