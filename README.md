@@ -86,9 +86,54 @@ https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/pihol
 - sudo /opt/certbot/bin/certbot certonly --dns-cloudflare \ 
   --dns-cloudflare-credentials ~/CloudFlare/sub.domain.ini -d sub.domain
 
+> Raspbian - certificate output, copy these to machine with Caddy
+```bash
+$ ls /etc/letsencrypt/archive/dev.domain.com/
+cert1.pem  chain1.pem  fullchain1.pem  privkey1.pem
+```
+
 > sub.domain.ini
 ```
 ns_cloudflare_api_token = XXX
+```
+
+## Caddy
+
+> TLS config - /etc/caddy/Caddyfile
+
+```
+{   
+    debug
+    log
+    local_certs      
+}
+
+https://video.dev.domain.com {
+
+    tls /Users/matt/certs/dev.domain.com/cert1.pem /Users/matt/certs/dev.domain.com/privkey1.pem
+
+    encode gzip
+    
+    handle_path /* {
+        reverse_proxy 127.0.0.1:5173
+    }
+
+    handle_path /hls/* {
+        root * ./hls
+        file_server browse
+    }
+
+    handle_path /dash/* {
+        root * ./dash
+        file_server browse
+    }
+
+    handle {
+        root * ./public
+        file_server browse
+    }
+
+}
 ```
 
 # Hosts
