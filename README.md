@@ -54,7 +54,7 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-#### Accesss
+#### Access
 
 ```bash
 minikube service argocd-server -n argocd -p test
@@ -105,7 +105,7 @@ ns_cloudflare_api_token = XXX
 {   
     debug
     log
-    local_certs      
+    local_certs
 }
 
 https://video.dev.domain.com {
