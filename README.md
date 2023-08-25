@@ -70,6 +70,8 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.pas
 #### PiHole DNS Setup
 https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/pihole.md
 
+### Vaultwarden
+https://greg.jeanmart.me/2020/04/13/self-host-your-password-manager-with-bitward/
 
 ### hosts
 
